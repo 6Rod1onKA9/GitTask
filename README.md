@@ -201,8 +201,76 @@ We can see that the wrong commits are not gone. They are not listed in the main 
 
 # Creating a branch
 
+37) It is time to make our page more stylish with a touch of CSS. We'll develop this feature in a new branch called `style`.
 
+![image](https://github.com/user-attachments/assets/1f5c2692-babb-43b3-92b4-50d9ee0bf649)
 
+38) Now let's add the `style.css` file
 
+![image](https://github.com/user-attachments/assets/431d1550-4fad-41b5-b2b0-6e1929629617)
+![image](https://github.com/user-attachments/assets/07f50f6b-2bd9-4ed4-b89f-4fa5594e56ab)
 
+39) Now we change `hello.html` to add `style.css`
 
+![image](https://github.com/user-attachments/assets/a08f8e15-6437-4dd4-8253-bf23159779c5)
+![image](https://github.com/user-attachments/assets/66bbf8c0-6daf-49e7-8cb5-47f8e7823bf5)
+
+# Switching branches
+
+40) To switch between branches, we use the `git switch` command.
+
+![image](https://github.com/user-attachments/assets/3d1b1597-2dfe-4710-9d97-f44e102eb6fe)
+![image](https://github.com/user-attachments/assets/c335ea50-ab92-4109-a5f3-28d958fc7baf)
+
+Now we are on the `main` branch. As we can see, the `hello.html` has no traces `of style.css`. However, it is still in the repository, but we just can't see it from the `main` branch.
+
+41) Let's return to the style branch
+
+![image](https://github.com/user-attachments/assets/28a29751-53f6-4dfc-9463-2e4c97d5c022)
+
+# Moving files
+
+42) Git provides the capability to examine the change history of a specific file. Let's take a look at the change log for the `hello.html` file before we proceed with renaming it.
+
+![image](https://github.com/user-attachments/assets/9da1bf08-afa6-476d-b9e0-c4a2489ae7d2)
+![image](https://github.com/user-attachments/assets/8db59201-7eba-4bde-9dfb-19050ce420ed)
+
+43) The `show` command is used to display the changes in a specific commit. Let's examine the changes in the `hello.html` file in the commit tagged with `v1`
+
+![image](https://github.com/user-attachments/assets/52d63a49-1dc3-4cb5-810d-6a7ec54e79db)
+
+44) Let's rename our `hello.html` file to `index.html` using the standard `mv` command and observe the outcome.
+
+![image](https://github.com/user-attachments/assets/12ba7289-d31b-44c8-851b-1fe50a5a4fbf)
+![image](https://github.com/user-attachments/assets/3b5d8f8a-c444-4246-9987-60eac5021c9a)
+
+45) Let's move our `style.css` file to the `css` directory. We'll use the git `mv` command to ensure the move is recorded in Git's history as a move, not as a deletion and addition of a new file.
+
+![image](https://github.com/user-attachments/assets/191abcec-da2c-4f48-a974-d7e7d54f1ccd)
+
+46) Now we commit our changes and examine the change history of the `css/style.css` file. To see the file's history prior to its relocation, we'll need to include the `--follow` option.
+
+![image](https://github.com/user-attachments/assets/b033c99d-20c9-409f-a245-3cee073787e7)
+
+# Changes in the main branch
+
+47) Let's create a file `README`.
+
+![image](https://github.com/user-attachments/assets/4601a4d5-c831-4531-af89-a8ec1db9881d)
+![image](https://github.com/user-attachments/assets/30a1c1ec-31fb-4315-944b-44a3dfec6a05)
+
+# Viewing diverging branches
+
+48) We now have two diverging branches in the repository. Let's use the following `log` command to view the branches and how they diverge.
+
+![image](https://github.com/user-attachments/assets/222a54fd-868b-4cb0-89de-8b9719aadece)
+![image](https://github.com/user-attachments/assets/4983aaee-9179-42ea-8106-42c39279cd6d)
+![image](https://github.com/user-attachments/assets/9b6ccca8-5c2c-41f2-bf70-5dc695f50c21)
+
+# Merging
+
+49) Merging brings changes from two branches into one. Let us go back to the `style` branch and merge it with `main`.
+
+![image](https://github.com/user-attachments/assets/18acda9d-2f39-4e74-875d-99cc73993115)
+![image](https://github.com/user-attachments/assets/4243cdd7-ed2f-48b6-bf37-29c90ccbc7ad)
+![image](https://github.com/user-attachments/assets/28a47afe-1aac-4075-999e-b5df0fb7bc37)
